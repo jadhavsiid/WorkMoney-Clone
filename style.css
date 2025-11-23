@@ -182,3 +182,7 @@ input#hero-searchbar {
   text-align: center;
   font-weight: 500;
 }
+/* ^ Ways to Save Section */
+.ways-to-save {
+  text-align: center;
+}
