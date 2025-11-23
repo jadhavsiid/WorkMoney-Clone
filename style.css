@@ -1,0 +1,184 @@
+/* ^ Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+/* ^ Universal CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Work Sans", sans-serif;
+  color: #32314c;
+}
+/* ^ Navbar */
+nav {
+  width: 100%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 0.8rem 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #fff;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+/* ^ logo */
+img#logo {
+  width: 12rem;
+  height: 2.5rem;
+}
+/* ^ Nav Links */
+.nav-links ul {
+  display: flex;
+  font-size: 1rem;
+}
+.nav-links ul li {
+  list-style: none;
+  margin: 0.5rem 0.8rem;
+}
+.nav-links ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #32314c;
+}
+/* ^ Search Bar */
+input#searchbar {
+  width: 12rem;
+  padding: 0 1rem;
+  height: 2.5rem;
+  border: 1px solid #c9c9e0;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+input#searchbar::placeholder {
+  font-size: 1rem;
+  color: rgb(93, 92, 115, 0.8);
+}
+.searchbar button {
+  background-color: #32314c;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+}
+.searchbar button:hover {
+  cursor: pointer;
+}
+/* ^ Login and Join Button */
+.btns #login {
+  border: 1px solid #32314c;
+  padding: 0.8rem 1.4rem;
+  background-color: transparent;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+.btns #login:hover {
+  cursor: pointer;
+}
+.btns #join {
+  background-color: #32314c;
+  padding: 0.8rem 1.4rem;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+.btns #join:hover {
+  cursor: pointer;
+}
+/* ^ Hero Section */
+section.hero {
+  display: flex;
+}
+/* ^ Left Section */
+.left-section {
+  width: 50%;
+  padding: 1.1rem;
+}
+/* ^ h1 */
+.left-section h1 {
+  min-width: 8rem;
+  font-size: 3.75rem;
+  margin-left: 5rem;
+  margin-top: 3.5rem;
+  font-weight: 500;
+}
+/* ^ h3 */
+.left-section h3 {
+  margin-left: 5rem;
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+/* ^ h5 */
+.left-section h5 {
+  margin-left: 5rem;
+  font-weight: 500;
+  font-size: 0.85rem;
+  margin-top: 1.5rem;
+}
+/* ^ Searchbar */
+input#hero-searchbar {
+  width: 19rem;
+  padding: 0 1rem;
+  height: 2.5rem;
+  border: 1px solid #c9c9e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-left: 4.8rem;
+  margin-top: 0.5rem;
+}
+/* ^ Show me savings btn */
+#hero-btn {
+  padding: 0.8rem 5.5rem;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+}
+/* ^ Featured section */
+.gm-america {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  margin-left: 4.8rem;
+}
+/* ^ Featured section- p */
+.gm-america p {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+/* ^ Iframe */
+.left-section iframe {
+  margin-top: 0.5rem;
+  margin-left: 4.8rem;
+  border: none;
+  border-radius: 10px;
+}
+/* ^ Right section */
+.right-section {
+  width: 50%;
+}
+.video-with-radius {
+  border-radius: 15px;
+  width: 90%;
+  height: auto;
+  margin-top: 5rem;
+}
+/* ^ Infor Section */
+.info {
+  background-color: #f3f6fa;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+.info p {
+  text-align: center;
+  font-weight: 500;
+}
