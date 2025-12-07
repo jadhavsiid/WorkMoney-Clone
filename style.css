@@ -1,6 +1,6 @@
-/* ^ Importing Google Fonts */
+/* & Importing Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-/* ^ Universal CSS */
+/* & Universal CSS */
 * {
   margin: 0;
   padding: 0;
@@ -12,177 +12,378 @@ body {
   font-family: "Work Sans", sans-serif;
   color: #32314c;
 }
-/* ^ Navbar */
+/* & Navbar */
 nav {
   width: 100%;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  padding: 0.8rem 0;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
-  background-color: #fff;
 }
 .nav-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-color: #ffffff;
+}
+.logo-and-nav-links {
+  display: flex;
   align-items: center;
 }
-/* ^ logo */
-img#logo {
-  width: 12rem;
-  height: 2.5rem;
-}
-/* ^ Nav Links */
-.nav-links ul {
+.logo-and-nav-links ul {
   display: flex;
-  font-size: 1rem;
+  margin: 0 0.8rem;
 }
-.nav-links ul li {
+.logo-and-nav-links ul li {
   list-style: none;
-  margin: 0.5rem 0.8rem;
+  margin: 0 0.8rem;
 }
-.nav-links ul li a {
+.logo-and-nav-links ul li a {
   text-decoration: none;
-  font-weight: 500;
   color: #32314c;
+  font-weight: 500;
 }
-/* ^ Search Bar */
-input#searchbar {
-  width: 12rem;
-  padding: 0 1rem;
+.logo-and-nav-links ul li a:hover {
+  text-decoration: underline;
+}
+.primary-sb {
+  width: 13rem;
   height: 2.5rem;
-  border: 1px solid #c9c9e0;
-  border-radius: 10px;
+  border: 1px solid #bfbfdb;
+  border-radius: 8px;
+  padding: 0.5rem;
   font-size: 1rem;
 }
-input#searchbar::placeholder {
+.primary-sb::placeholder {
   font-size: 1rem;
-  color: rgb(93, 92, 115, 0.8);
 }
-.searchbar button {
+.filled-btn {
   background-color: #32314c;
-  padding: 0.7rem 1.5rem;
-  border-radius: 10px;
-}
-.searchbar button:hover {
-  cursor: pointer;
-}
-/* ^ Login and Join Button */
-.btns #login {
-  border: 1px solid #32314c;
-  padding: 0.8rem 1.4rem;
-  background-color: transparent;
-  font-weight: bold;
-  border-radius: 10px;
-  font-size: 0.8rem;
-}
-.btns #login:hover {
-  cursor: pointer;
-}
-.btns #join {
-  background-color: #32314c;
-  padding: 0.8rem 1.4rem;
-  color: #fff;
+  padding: 0.75rem 1.6rem;
   border: none;
+  border-radius: 8px;
+  color: #ffffff;
   font-weight: bold;
-  border-radius: 10px;
-  font-size: 0.8rem;
-  margin-left: 0.5rem;
 }
-.btns #join:hover {
+.filled-btn:hover {
+  cursor: pointer;
+}
+.fa-magnifying-glass {
+  color: white;
+  font-size: 0.8rem;
+}
+.nav-btns {
+  display: flex;
+  gap: 1rem;
+}
+.unfilled-btn {
+  background-color: transparent;
+  padding: 0.75rem 1.6rem;
+  border: 1px solid #32314c;
+  border-radius: 8px;
+  color: #32314c;
+  font-weight: bold;
+}
+.unfilled-btn:hover {
   cursor: pointer;
 }
 /* ^ Hero Section */
-section.hero {
+.hero {
   display: flex;
+  padding: 4rem;
+  gap: 1rem;
+  margin-top: 4rem;
 }
-/* ^ Left Section */
-.left-section {
-  width: 50%;
-  padding: 1.1rem;
+.left-hero {
+  width: 45%;
 }
-/* ^ h1 */
-.left-section h1 {
-  min-width: 8rem;
-  font-size: 3.75rem;
-  margin-left: 5rem;
-  margin-top: 3.5rem;
+.left-hero h1 {
+  font-size: 3.8rem;
   font-weight: 500;
 }
-/* ^ h3 */
-.left-section h3 {
-  margin-left: 5rem;
-  font-weight: 500;
-  font-size: 1.3rem;
+.left-hero h3 {
   margin-top: 1rem;
-}
-/* ^ h5 */
-.left-section h5 {
-  margin-left: 5rem;
+  font-size: 1.3rem;
   font-weight: 500;
-  font-size: 0.85rem;
-  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
-/* ^ Searchbar */
-input#hero-searchbar {
-  width: 19rem;
-  padding: 0 1rem;
-  height: 2.5rem;
-  border: 1px solid #c9c9e0;
-  border-radius: 10px;
-  font-size: 1rem;
-  margin-left: 4.8rem;
-  margin-top: 0.5rem;
-}
-/* ^ Show me savings btn */
-#hero-btn {
-  padding: 0.8rem 5.5rem;
-  border: none;
-  color: #fff;
-  font-weight: bold;
-}
-/* ^ Featured section */
-.gm-america {
+.input {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 2rem;
-  margin-left: 4.8rem;
+  align-items: baseline;
+  gap: 0.3rem;
 }
-/* ^ Featured section- p */
-.gm-america p {
+.left-hero label {
   font-size: 0.9rem;
   font-weight: 500;
 }
-/* ^ Iframe */
-.left-section iframe {
+input#zip-code {
   margin-top: 0.5rem;
-  margin-left: 4.8rem;
-  border: none;
+  width: 18rem;
+}
+button#show-me-savings {
+  width: 19rem;
+  padding: 0.8rem;
+}
+.featured {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+iframe {
+  margin-top: 1rem;
   border-radius: 10px;
 }
-/* ^ Right section */
-.right-section {
-  width: 50%;
+.right-hero {
+  width: 55%;
 }
-.video-with-radius {
-  border-radius: 15px;
-  width: 90%;
-  height: auto;
-  margin-top: 5rem;
+.rounded-video {
+  border: none;
+  border-radius: 10px;
+  width: 100%;
 }
-/* ^ Infor Section */
-.info {
+/* & Eight Million blue section */
+.eight-m {
   background-color: #f3f6fa;
-  padding: 2rem;
-  margin-top: 2rem;
-}
-.info p {
+  padding: 1.8rem;
   text-align: center;
   font-weight: 500;
 }
-/* ^ Ways to Save Section */
+/* & Ways to save section */
 .ways-to-save {
+  background-image: linear-gradient(to bottom left, #fef1d1, #fde1d3, #fff9f4);
+  width: 100%;
+  padding: 0.5rem;
+}
+.content-wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+.content-wrapper h4 {
   text-align: center;
+  margin: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.content-wrapper h2 {
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+/* ^ Resources  */
+.resources {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+.box-sect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 346px;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+.box-sect i {
+  font-size: 2rem;
+}
+.info a {
+  color: #32314c;
+  text-decoration: none;
+}
+.info a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.info p {
+  font-weight: 500;
+}
+/* & See Solutions button */
+#soln-btn {
+  width: 100%;
+  margin: 2.3rem 0;
+}
+/* & How it works section */
+.how-it-works {
+  background-color: #f3f6fa;
+  margin-top: 2.5rem;
+}
+.video-element {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+.video-element video {
+  width: 58%;
+}
+.how-it-works h3,
+h4,
+h2 {
+  text-align: center;
+}
+.how-it-works h3 {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.how-it-works h2 {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.how-it-works h4 {
+  font-weight: 500;
+}
+.steps-section {
+  width: fit-content;
+  margin: 0 auto;
+}
+.steps-section button {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.steps {
+  margin: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  width: fit-content;
+}
+.steps i {
+  font-size: 1.5rem;
+  background-color: #d9e3ee;
+  padding: 0.7rem;
+  border-radius: 50%;
+}
+.steps-writeup h3 {
+  text-align: left;
+  margin: 0;
+  font-weight: bold;
+}
+/* & Member Benifits Section */
+.member-benifits {
+  padding: 1.5rem;
+}
+.member-benifits h3 {
+  text-align: center;
+  font-weight: 500;
+}
+.member-benifits h2 {
+  margin: 1.5rem 0;
+  text-align: center;
+  font-weight: 500;
+}
+.offerings {
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.offer {
+  display: flex;
+  width: 30%;
+  align-items: center;
+  gap: 1.5rem;
+
+  justify-content: center;
+  padding: 1.5rem;
+}
+.offer i {
+  font-size: 3rem;
+}
+.offer-content h3 {
+  font-weight: bold;
+  text-align: left;
+}
+.offerings button {
+  width: 55%;
+}
+/* & Support */
+.support {
+  background-color: #f3f6fa;
+  padding: 1.5rem;
+}
+.support h3 {
+  text-align: center;
+  font-weight: 500;
+}
+.support h2 {
+  margin-top: 1.5rem;
+  font-weight: 500;
+}
+.support p {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+.support p a {
+  color: #227381;
+}
+/* & Start Saving Money Today */
+.start-saving-money-today {
+  width: 100%;
+}
+.start-saving-money-today h3 {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  width: 100%;
+}
+.start-saving-money-today h2 {
+  margin-top: 1rem;
+  font-weight: 500;
+}
+.search {
+  width: fit-content;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+}
+.search label {
+  font-weight: bold;
+}
+.search .input input {
+  margin-top: 1.3rem;
+  width: 350px;
+}
+.search .input button {
+  width: 350px;
+}
+/* & footer */
+footer {
+  padding: 1rem;
+}
+.footer-sections {
+  display: flex;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+.links-section {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.links-section h4 {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+.links-section a {
+  display: block;
+  color: #32314c;
+  text-decoration: none;
+  font-weight: 500;
+}
+.links-section a:hover {
+  text-decoration: underline;
+}
+.social-section {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  font-size: 1.5rem;
 }

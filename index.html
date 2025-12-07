@@ -3,133 +3,391 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Workmony- Help Americans save money and live a better life</title>
-    <!-- ^ Linking CSS -->
+    <title>Workmoney- Helps Americans save money and live a better life</title>
+    <!-- & Attaching Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./media/favicon-removebg-preview.png"
+      type="image/x-icon"
+    />
+    <!-- & Linking CSS -->
     <link rel="stylesheet" href="style.css" />
-    <!-- ^ Fontawesome CDN -->
+    <!-- & Fontawesome CDN -->
     <script
       src="https://kit.fontawesome.com/ee2093fa90.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <!-- ^ Navbar -->
+    <!-- & Navbar -->
     <nav>
       <div class="nav-container">
-        <img src="./media/logo.png" alt="logo" id="logo" />
-        <div class="nav-links">
+        <div class="logo-and-nav-links">
+          <img src="./media/site-logo.png" alt="logo" width="150" height="32" />
           <ul>
             <li><a href="#">Money Savers</a></li>
             <li><a href="#">Money Tips</a></li>
             <li><a href="#">Member Benifits</a></li>
             <li><a href="#">Money Finder</a></li>
-            <li><a href="#">About us</a></li>
+            <li><a href="#">About Us</a></li>
           </ul>
         </div>
-        <!-- ^ Searchbar -->
-        <div class="searchbar">
+        <div class="nav-search">
           <input
             type="text"
-            name="searchbar"
-            id="searchbar"
+            name="search-bar"
+            id="navsearch"
+            class="primary-sb"
             placeholder="Search"
           />
-          <button>
-            <i class="fa-solid fa-magnifying-glass" style="color: #ffffff"></i>
+          <button class="filled-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
-        <!-- ^ Log in and Join buttons -->
-        <div class="btns">
-          <button id="login">Log in</button>
-          <button id="join">Join</button>
+        <div class="nav-btns">
+          <button class="unfilled-btn">Log in</button>
+          <button class="filled-btn">Join</button>
         </div>
       </div>
     </nav>
-    <!-- ^ Hero section -->
     <main>
-      <section class="hero">
-        <div class="left-section">
+      <!-- & Hero Section -->
+      <div class="hero">
+        <section class="left-hero">
           <h1>Feel better about your money.</h1>
           <h3>Our nonprofit offers tons of ways to save—on everything.</h3>
-          <h5>Zip Code *</h5>
-          <div class="searchbar">
+          <label for="zip-code">Zip Code*</label>
+          <br />
+          <div class="input">
             <input
               type="text"
-              name="searchbar"
-              id="hero-searchbar"
+              id="zip-code"
+              class="primary-sb"
               placeholder="eg. 10024"
+              required
             />
-            <button id="hero-btn">Show Me Savings</button>
+            <button class="filled-btn" id="show-me-savings">
+              Show Me Savings
+            </button>
           </div>
-          <div class="gm-america">
+          <div class="featured">
             <p>Featured on Good Morning America</p>
-            <img
-              src="./media/abc-logo.webp"
-              alt="abc-logo"
-              width="35"
-              height="35"
-            />
+            <img src="./media/abc-logo.webp" alt="abc-logo" width="30" />
           </div>
-
           <iframe
-            width="160"
+            width="180"
             height="100"
-            src="https://www.youtube-nocookie.com/embed/FHgYbvAQxY8?si=au_oIMrG7PpL6KvM"
+            src="https://www.youtube.com/embed/FHgYbvAQxY8?si=iwBHKrvlpMamui1c&amp;start=4"
+            title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
           ></iframe>
-        </div>
-        <div class="right-section">
-          <video class="video-with-radius" autoplay loop>
-            <source src="./media/Hero_Section_Video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </section>
-    </main>
-    <!-- ^ Info section -->
-    <div class="info">
-      <p>Join the 8+ million others using WorkMoney today.</p>
-    </div>
-    <!-- ^ Ways to save -->
-    <div class="ways-to-save">
-      <h4>Ways to Save</h4>
-      <h2>There are many resources available to help you.</h2>
-      <hr />
-      <div class="components">
-        <div class="component" id="food">
-          <i class="fa-solid fa-utensils" style="color: #32314c"></i>
-          <h3><a href="#">Food</a></h3>
-          <p>Potential Savings: $199/month</p>
-        </div>
-        <div class="component" id="Phone-and-Utilities">
-          <i class="fa-solid fa-plug" style="color: #32314c"></i>
-          <h3><a href="#">Phone & Utilities</a></h3>
-          <p>Potential Savings: $45/month</p>
-        </div>
-        <div class="component" id="family-care">
-          <i class="fa-solid fa-people-roof" style="color: #32314c"></i>
-          <h3><a href="#">Family Care</a></h3>
-          <p>Potential Savings: $554/month</p>
-        </div>
-        <div class="component" id="healthcare">
-          <i class="fa-solid fa-heart-pulse" style="color: #32314c"></i>
-          <h3><a href="#">Healthcare</a></h3>
-          <p>Potential Savings: $231/month</p>
-        </div>
-        <div class="component" id="transit-and-car">
-          <i class="fa-solid fa-car-on" style="color: #32314c"></i>
-          <h3><a href="#">Transit & Car</a></h3>
-          <p>Potential Savings: $340/year</p>
-        </div>
-        <div class="component" id="home-upgrades">
-          <i class="fa-solid fa-house-circle-check" style="color: #32314c"></i>
-          <h3><a href="#">Home Upgrades</a></h3>
-          <p>Potential Savings: $750/yr</p>
+        </section>
+        <section class="right-hero">
+          <video
+            src="./media/Hero_Section_Video.mp4"
+            class="rounded-video"
+            autoplay
+            muted
+            loop
+          ></video>
+        </section>
+      </div>
+      <!-- & Eight Million blue section -->
+      <div class="eight-m">
+        <p>Join the 8+ million others using WorkMoney today.</p>
+      </div>
+      <!-- & Ways to save section -->
+      <div class="ways-to-save">
+        <div class="content-wrapper">
+          <h4>ways to save</h4>
+          <h2>There are many resources available to help you.</h2>
+          <hr />
+          <div class="resources">
+            <div class="box-sect">
+              <i class="fa-solid fa-utensils" style="color: #32314c"></i>
+              <div class="info">
+                <a href="#"><h3>Food</h3></a>
+                <p>Potential Savings: $199/month</p>
+              </div>
+            </div>
+            <div class="box-sect">
+              <i
+                class="fa-solid fa-plug-circle-check"
+                style="color: #32314c"
+              ></i>
+              <div class="info">
+                <a href="#"><h3>Phone & Utilities</h3></a>
+                <p>Potential Savings: $45/month</p>
+              </div>
+            </div>
+            <div class="box-sect">
+              <i class="fa-solid fa-people-roof" style="color: #32314c"></i>
+              <div class="info">
+                <a href="#"><h3>Family Care</h3></a>
+                <p>Potential Savings: $554/month</p>
+              </div>
+            </div>
+            <div class="box-sect">
+              <i class="fa-solid fa-heart-pulse" style="color: #32314c"></i>
+              <div class="info">
+                <a href="#"><h3>Healthcare</h3></a>
+                <p>Potential Savings: $231/month</p>
+              </div>
+            </div>
+            <div class="box-sect">
+              <i class="fa-solid fa-car" style="color: #32314c"></i>
+              <div class="info">
+                <a href="#"><h3>Transit & Car</h3></a>
+                <p>Potential Savings: $340/year</p>
+              </div>
+            </div>
+            <div class="box-sect">
+              <i
+                class="fa-solid fa-house-circle-check"
+                style="color: #32314c"
+              ></i>
+              <div class="info">
+                <a href="#"><h3>Home Upgrades</h3></a>
+                <p>Potential Savings: $750/year</p>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <button class="filled-btn" id="soln-btn">See Solutions</button>
         </div>
       </div>
-    </div>
+      <!-- & How it works -->
+      <div class="how-it-works">
+        <div class="video-element">
+          <video
+            src="./media/How-It-Works.mp4"
+            autoplay
+            loop
+            muted
+            class="rounded-video"
+          ></video>
+        </div>
+        <h3>How it works</h3>
+        <h2>Just three easy steps to get started</h2>
+        <h4>Start saving in just 10 minutes</h4>
+        <div class="steps-section">
+          <div class="steps">
+            <i class="fa-solid fa-list-check" style="color: #32314c"></i>
+            <div class="steps-writeup">
+              <h3>Answer a few basic questions</h3>
+              <p>
+                Answer a few basic questions about your location, household, and
+                income.
+              </p>
+            </div>
+          </div>
+          <div class="steps">
+            <i class="fa-solid fa-key" style="color: #32314c"></i>
+            <div class="steps-writeup">
+              <h3>We find the best match</h3>
+              <p>
+                Then, we crunch the numbers and show the best local resources to
+                save the most money.
+              </p>
+            </div>
+          </div>
+          <div class="steps">
+            <i class="fa-solid fa-piggy-bank" style="color: #32314c"></i>
+            <div class="steps-writeup">
+              <h3>Start saving</h3>
+              <p>
+                Compare resources, apply, and enjoy more money in your pocket
+              </p>
+            </div>
+          </div>
+          <button class="filled-btn">Start Saving</button>
+        </div>
+      </div>
+      <!-- & Member Benifits Section -->
+      <div class="member-benifits">
+        <h3>Member Benifits</h3>
+        <h2>What WorkMoney has to offer you</h2>
+        <div class="offerings">
+          <div class="offer">
+            <i class="fa-solid fa-inbox" style="color: #32314c"></i>
+            <div class="offer-content">
+              <h3>Get money-saving tips</h3>
+              <p>
+                We’ll regularly send suggestions for saving money straight to
+                your email.
+              </p>
+            </div>
+          </div>
+          <div class="offer">
+            <i
+              class="fa-solid fa-money-bill-transfer"
+              style="color: #32314c"
+            ></i>
+            <div class="offer-content">
+              <h3>Save on the everyday</h3>
+              <p>
+                Pay less on things like gas, groceries, prescriptions, and going
+                out.
+              </p>
+            </div>
+          </div>
+          <div class="offer">
+            <i class="fa-solid fa-coins" style="color: #32314c"></i>
+            <div class="offer-content">
+              <h3>Reduce your debts</h3>
+              <p>Get help with medical bills, student loans, or bankruptcy.</p>
+            </div>
+          </div>
+          <div class="offer">
+            <i class="fa-solid fa-hand-holding-hand" style="color: #34314c"></i>
+            <div class="offer-content">
+              <h3>Discover local support</h3>
+              <p>
+                Find free and low-cost resources–including healthcare, childcare
+                and eldercare–in your community.
+              </p>
+            </div>
+          </div>
+          <div class="offer">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <div class="offer-content">
+              <h3>Shop around for services</h3>
+              <p>
+                Compare prices on car loans and insurance from national lenders.
+              </p>
+            </div>
+          </div>
+          <div class="offer">
+            <i
+              class="fa-solid fa-hand-holding-dollar"
+              style="color: #34314c"
+            ></i>
+            <div class="offer-content">
+              <h3>Receive exclusive offers</h3>
+              <p>
+                Take advantage of member-only deals on shopping, dining and
+                travel.
+              </p>
+            </div>
+          </div>
+          <button class="filled-btn">Join WorkMoney</button>
+        </div>
+      </div>
+      <!-- & Support -->
+      <div class="support">
+        <h3>Support</h3>
+        <h2>Not sure where to start?</h2>
+        <p>
+          Call <a href="#">833-WRK-MNEY (833-975-6639)</a> to chat with
+          WorkMoney's member services team and get a <br />
+          little extra support on how to start saving today.
+        </p>
+      </div>
+      <!-- & Start saving money today -->
+      <div class="start-saving-money-today">
+        <h3>Start Saving Money Today</h3>
+        <h2>Find ways to keep more money in your pocket</h2>
+        <div class="search">
+          <label for="zip-code">Zip Code*</label>
+          <div class="input">
+            <input type="text id="zip-code2" class="primary-sb" placeholder="eg.
+            10024" required />
+            <button class="filled-btn sav-btn" id="show-me-savings">
+              Show Me Savings
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- & Footer -->
+      <footer>
+        <img src="./media/site-logo.png" alt="" width="200px" />
+        <div class="footer-sections">
+          <div class="links-section">
+            <div class="section-1">
+              <h4>About Us</h4>
+              <a href="#">Carrers</a>
+              <a href="#">Contact Us</a>
+              <a href="#">In the News</a>
+              <br />
+              <br />
+              <h4>Money Savers</h4>
+              <a href="#">Family Care</a>
+              <a href="#">Food</a>
+              <a href="#">Healthcare</a>
+              <a href="#">Home Upgrades</a>
+              <a href="#">Housing</a>
+              <a href="#"
+                >Credit, Devt, & <br />
+                Investing</a
+              >
+              <a href="#">Taxes</a>
+              <a href="#">Transit and Car</a>
+              <a href="#">Phone & Utilites</a>
+              <a href="#">Work</a>
+            </div>
+            <div class="section-2">
+              <h4>Money Tips</h4>
+              <a href="#">Budget 101</a>
+              <a href="#">Credit 101</a>
+              <a href="#">Daily Savings</a>
+              <a href="#">Debt Tips</a>
+              <a href="#">Family Events</a>
+              <a href="#">Healthcare</a>
+              <a href="#">Jobs</a>
+              <a href="#">Scams</a>
+              <a href="#">Taxes</a>
+              <br />
+              <br />
+              <h4>Membership</h4>
+              <a href="#">Member Benifits</a>
+              <a href="#">Member</a>
+              <a href="#">Testimonials</a>
+              <a href="#">Member Login</a>
+              <a href="#">Sign Up</a>
+            </div>
+            <div class="section-3">
+              <h4>Resources</h4>
+              <a href="#">Money Finder</a>
+              <a href="#">Local Resource</a>
+              <a href="#">Finder</a>
+              <a href="#">Search</a>
+              <br />
+              <br />
+              <h4>Policies and Disclaimers</h4>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms</a>
+              <a href="#">SMS Policy</a>
+              <br />
+              <br />
+              <h4>Languages</h4>
+              <a href="#">English</a>
+              <a href="#">Spanish</a>
+            </div>
+          </div>
+          <div class="social-section">
+            <a href="#">
+              <i class="fa-brands fa-facebook" style="color: #32314c"></i
+            ></a>
+            <a href="#">
+              <i class="fa-brands fa-x-twitter" style="color: #32314c"></i
+            ></a>
+            <a href="#">
+              <i class="fa-brands fa-youtube" style="color: #32314c"></i
+            ></a>
+            <a href="#">
+              <i class="fa-brands fa-instagram" style="color: #32314c"></i
+            ></a>
+            <a href="#">
+              <i class="fa-brands fa-tiktok" style="color: #32314c"></i
+            ></a>
+          </div>
+        </div>
+        <hr />
+        <p>© 2025– WorkMoney</p>
+      </footer>
+    </main>
   </body>
 </html>
